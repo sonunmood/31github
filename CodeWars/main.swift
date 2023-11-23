@@ -24,3 +24,11 @@ func getGrade(_ s1:Int, _ s2:Int, _ s3:Int) -> String {
 
 var result = getGrade(80, 90, 30)
 print(result)
+
+
+func repeatStr(_ n: Int, _ string: String) -> String {
+  
+    return String(String(repeating: string, count: n))
+}
+
+print(repeatStr(8, "S"))
