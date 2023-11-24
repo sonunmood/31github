@@ -32,3 +32,17 @@ func repeatStr(_ n: Int, _ string: String) -> String {
 }
 
 print(repeatStr(8, "S"))
+
+func evenOrOdd(_ number: Int) -> String {
+    var numberType = ""
+    
+    if number % 2 == 0 {
+       numberType = "Even"
+    } else {
+        numberType = "Odd"
+    }
+    
+    return numberType
+}
+
+print(evenOrOdd(143))
