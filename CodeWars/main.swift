@@ -46,3 +46,11 @@ func evenOrOdd(_ number: Int) -> String {
 }
 
 print(evenOrOdd(143))
+
+func multiNumber(_ number: Int) -> String {
+     
+   return " 1 * \(number) = \(number * 1) \n 2 * \(number) = \(number * 2) \n 3 * \(number) = \(number * 3) \n 4 * \(number) = \(number * 4) \n 5 * \(number) = \(number * 5) \n 6 * \(number) = \(number * 6) \n 7 * \(number) = \(number * 7) \n 8 * \(number) = \(number * 8) \n 9 * \(number) = \(number * 9) \n 10 * \(number) = \(number * 10)"
+}
+
+print(multiNumber(5))
+
