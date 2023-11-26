@@ -54,3 +54,12 @@ func multiNumber(_ number: Int) -> String {
 
 print(multiNumber(5))
 
+func booleanToString(_ b: Bool) -> String {
+ 
+    switch b {
+    case true: return "true"
+    case false: return "false"
+    }
+}
+
+print(booleanToString(false))
