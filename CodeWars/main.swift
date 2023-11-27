@@ -63,3 +63,39 @@ func booleanToString(_ b: Bool) -> String {
 }
 
 print(booleanToString(false))
+
+//Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+func gigitToString (_ digit: String) -> String {
+    var number = Int(digit)
+    
+    return digit
+}
+
+func createBox(_ m:Int, _ n:Int) -> [[Int]] {
+   
+    
+  return [[]]
+}
+
+func square(_ num: Int) -> Int {
+  
+  return num * num
+}
+
+print(square(8))
+
+func wordSearch(_ str:String, _ arr:[String]) -> [String] {
+    var newArray: [String] = []
+
+    for i in arr {
+        if i.contains(str) {
+            newArray.append(i)
+        }
+    }
+    
+    return newArray
+}
+
+print((wordSearch("ko", ["koko", "iki", "ice", "juice", "plan"])))
+
