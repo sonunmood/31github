@@ -99,3 +99,10 @@ func wordSearch(_ str:String, _ arr:[String]) -> [String] {
 
 print((wordSearch("ko", ["koko", "iki", "ice", "juice", "plan"])))
 
+func digitize(_ num:Int) -> [Int] {
+    
+    var digitArray = String(num).compactMap { $0.wholeNumberValue}
+    
+    return digitArray
+}
+print(digitize(3456789))
