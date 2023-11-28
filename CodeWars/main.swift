@@ -106,3 +106,24 @@ func digitize(_ num:Int) -> [Int] {
     return digitArray
 }
 print(digitize(3456789))
+
+func summ(_ arr: [Any]) -> Int {
+    
+    return arr.reduce(0) { sum, element in
+        if let number = element as? Int {
+            return  sum + number
+        } else if let string = element as? String, let number = Int(string) {
+            return sum + number
+        } else {
+            return sum
+        }
+    }
+}
+
+print(summ([1,1,"2", 2, "5"]))
+
+func getSum(_ arr: [Any]) -> Int {
+    return arr.reduce(0) { $0 + (Int("\($1)") ?? 0) }
+}
+
+print(getSum([7,1,"8"]))
