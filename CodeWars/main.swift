@@ -127,3 +127,20 @@ func getSum(_ arr: [Any]) -> Int {
 }
 
 print(getSum([7,1,"8"]))
+
+
+//Your task in this kata is to implement a function that calculates the sum of the integers inside a string. For example, in the string "The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog", the sum of the integers is 3635.
+
+func summOfInt(_ string: String) -> Int {
+    var array: [Character] = []
+
+    for i in string {
+        if i.isNumber {
+            array.append(i)
+        }
+    }
+    
+    return array.compactMap { Int(String($0)) }.reduce(0, +)
+}
+
+print(summOfInt("hglhi1212"))
