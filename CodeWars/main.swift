@@ -163,3 +163,9 @@ func sumOfInt2(_ string: String) -> Int {
 }
 
 print(sumOfInt2("nrn88wjnj12kefnv1"))
+
+func boolToWord(_ bool: Bool) -> String {
+    return bool ? "Yes" : "No"
+}
+
+print(boolToWord(false))
