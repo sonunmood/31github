@@ -144,3 +144,22 @@ func summOfInt(_ string: String) -> Int {
 }
 
 print(summOfInt("hglhi1212"))
+
+
+func sumOfIntefers(_ srt: String) -> Int {
+    
+    let string = srt.components(separatedBy: CharacterSet.decimalDigits.inverted)
+    
+    return string.compactMap { Int($0)}.reduce(0, +)
+}
+
+print(sumOfIntefers("itguiwruj55dcef9fvrf16"))
+
+
+func sumOfInt2(_ string: String) -> Int {
+    let koko = string.split {!$0.isNumber}
+    print (koko)
+    return string.split {!$0.isNumber}.compactMap { Int($0) }.reduce(0, +)
+}
+
+print(sumOfInt2("nrn88wjnj12kefnv1"))
