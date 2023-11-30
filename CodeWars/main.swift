@@ -169,3 +169,25 @@ func boolToWord(_ bool: Bool) -> String {
 }
 
 print(boolToWord(false))
+
+//A number is non consecutive if it is not exactly one larger than the previous element in the array. The first element gets a pass and is never considered non consecutive.
+//Create a function named allNonConsecutive
+//E.g., if we have an array [1,2,3,4,6,7,8,15,16] then 6 and 15 are non-consecutive.
+
+func nonConsecutive(_ arr: [Int]) -> [(Int,Int)] {
+    var tuple:[(Int,Int)] = []
+   
+    for index in 1..<arr.count {
+        if arr[index] - arr[index - 1] != 1 {
+            print(index)
+            tuple.append((index,arr[index]))
+        }
+    }
+        return tuple
+}
+
+print(nonConsecutive([1,2,3,5,6,7,10,11,12,55,56]))
+
+func allNonConsecutive (_ arr: [Int]) -> [(Int, Int)] {
+  arr.enumerated().dropFirst().filter { arr[$0.0 - 1] != $0.1 - 1 }
+}
