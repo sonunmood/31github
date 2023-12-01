@@ -191,3 +191,22 @@ print(nonConsecutive([1,2,3,5,6,7,10,11,12,55,56]))
 func allNonConsecutive (_ arr: [Int]) -> [(Int, Int)] {
   arr.enumerated().dropFirst().filter { arr[$0.0 - 1] != $0.1 - 1 }
 }
+
+// MARK: 10/31
+func getSumOfStrings(_ a: String, _ b: String) -> String {
+    var result = 0
+
+    result = (Int(a) ?? 0) + (Int(b) ?? 0)
+    
+    return String(result)
+    
+}
+
+print(getSumOfStrings("3uhu","ij"))
+
+
+func sum_str(_ a: String, _ b: String) -> String {
+  String((Int(a) ?? 0) + (Int(b) ?? 0))
+}
+
+print(sum_str("lkj","kjh"))
