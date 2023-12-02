@@ -202,11 +202,27 @@ func getSumOfStrings(_ a: String, _ b: String) -> String {
     
 }
 
-print(getSumOfStrings("3uhu","ij"))
+print(getSumOfStrings("3","3"))
 
 
 func sum_str(_ a: String, _ b: String) -> String {
   String((Int(a) ?? 0) + (Int(b) ?? 0))
 }
 
-print(sum_str("lkj","kjh"))
+print(sum_str("10","3"))
+
+
+// MARK: 11/31
+
+func oddOne(_ arr: [Int]) -> Int? {
+    var index: Int?
+    for i in 1..<arr.count {
+        if arr[i] % 2 == 1 {
+          index = i
+        }
+    }
+    
+    return index
+}
+
+print(oddOne([2,4,6,8,10]))
