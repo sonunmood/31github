@@ -215,14 +215,28 @@ print(sum_str("10","3"))
 // MARK: 11/31
 
 func oddOne(_ arr: [Int]) -> Int? {
+    
+   
     var index: Int?
+    
+    var ind = index
+
     for i in 1..<arr.count {
         if arr[i] % 2 == 1 {
-          index = i
+          ind = i
         }
     }
     
-    return index
+    return ind
 }
 
-print(oddOne([2,4,6,8,10]))
+print(oddOne([2,4,6,8,10,33])!)
+
+//You Can't Code Under Pressure #1
+func doubleInteger(_ num: Int) -> Int {
+
+  return num * 2
+}
+
+print(doubleInteger(4))
+
