@@ -254,3 +254,11 @@ func quarter(of month: Int) -> Int {
 }
 
 print(quarter(of: 8))
+
+var laLigaGoals = 43
+var championLeagueGoals = 10
+var copaDelReyGoals = 3
+
+var totalGoals = laLigaGoals + championLeagueGoals + copaDelReyGoals
+
+print(totalGoals)
