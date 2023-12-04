@@ -262,3 +262,14 @@ var copaDelReyGoals = 3
 var totalGoals = laLigaGoals + championLeagueGoals + copaDelReyGoals
 
 print(totalGoals)
+
+//Grasshopper - Personalized Message
+func great(_ name: String, _ owner: String) -> String {
+    if name == owner {
+        return "Hello Boss"
+    } else {
+        return "Hello guest"
+    }
+}
+
+print(great("Sonun","Talgar"))
