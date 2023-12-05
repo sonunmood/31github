@@ -277,7 +277,14 @@ print(great("Sonun","Talgar"))
 //Disemvowel Trolls 14/31
 func disemvowel(_ s: String) -> String {
     let vowels: [Character] = ["A", "O", "I", "E", "U", "a", "o", "i", "e", "u"]
-    return s.filter { vowels.contains($0)    }
+    return s.filter {!vowels.contains($0)}
     
 }
 print(disemvowel("I am grateful for everything"))
+
+
+func shortName(_ names: [String]) -> [String] {
+    return names.filter {$0.count < 8}
+}
+
+print(shortName(["Sonun","Talgar","Rayana","Erkaiym", "Ermek"]))
