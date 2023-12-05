@@ -288,3 +288,14 @@ func shortName(_ names: [String]) -> [String] {
 }
 
 print(shortName(["Sonun","Talgar","Rayana","Erkaiym", "Ermek"]))
+
+func hero(bullets: Int, dragons: Int) -> Bool {
+    
+    if bullets == dragons * 2 || bullets > (dragons * 2) {
+        return true
+    } else {
+        return false
+    }
+}
+
+print(hero(bullets: 20, dragons: 10))
