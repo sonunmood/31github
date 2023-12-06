@@ -289,6 +289,8 @@ func shortName(_ names: [String]) -> [String] {
 
 print(shortName(["Sonun","Talgar","Rayana","Erkaiym", "Ermek"]))
 
+
+//Is he gonna survive?
 func hero(bullets: Int, dragons: Int) -> Bool {
     
     if bullets == dragons * 2 || bullets > (dragons * 2) {
@@ -299,3 +301,17 @@ func hero(bullets: Int, dragons: Int) -> Bool {
 }
 
 print(hero(bullets: 20, dragons: 10))
+
+func findDifference(_ a:[Int], _ b:[Int]) -> Int {
+    var aresult = a[0] * a[1] * a[2]
+    var bresult = b[0] * b[1] * b[2]
+    
+    if aresult > bresult {
+        return aresult - bresult
+    } else {
+        return bresult - aresult
+    }
+}
+
+print(findDifference([2,2,3], [1,1,1]))
+
