@@ -302,6 +302,7 @@ func hero(bullets: Int, dragons: Int) -> Bool {
 
 print(hero(bullets: 20, dragons: 10))
 
+//Difference of Volumes of Cuboids
 func findDifference(_ a:[Int], _ b:[Int]) -> Int {
     var aresult = a[0] * a[1] * a[2]
     var bresult = b[0] * b[1] * b[2]
@@ -315,3 +316,8 @@ func findDifference(_ a:[Int], _ b:[Int]) -> Int {
 
 print(findDifference([2,2,3], [1,1,1]))
 
+
+//Third Angle of a Triangle
+func otherAngle(a: Int, b: Int) -> Int {
+ return 180 - (a + b)
+}
