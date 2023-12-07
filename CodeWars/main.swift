@@ -140,7 +140,7 @@ func summOfInt(_ string: String) -> Int {
         }
     }
     
-    return array.compactMap { Int(String($0)) }.reduce(0, +)
+    return array.compactMap{ Int(String($0)) }.reduce(0, +)
 }
 
 print(summOfInt("hglhi1212"))
@@ -321,3 +321,29 @@ print(findDifference([2,2,3], [1,1,1]))
 func otherAngle(a: Int, b: Int) -> Int {
  return 180 - (a + b)
 }
+
+func strongNumber(_ number: Int) -> Int {
+    var digitArray: [Int] = String(number).compactMap { $0.wholeNumberValue}
+    var result = 1
+    var factorial = digitArray.reduce(1){$0 * $1}
+    print(digitArray)
+//    for i in 0..<digitArray.count {
+//        for n in 2...digitArray[i] {
+//            if n == 1 {
+//               result
+//            } else {
+//            result *= n
+//            }
+//        }
+//    }
+    return 0
+}
+
+print(strongNumber(123))
+
+
+func factorial(_ n: Int) -> Int {
+ if n == 0 { return 1 }
+ else { return n * factorial(n - 1) }
+}
+ print(factorial(5))
