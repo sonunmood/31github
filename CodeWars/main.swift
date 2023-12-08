@@ -304,8 +304,8 @@ print(hero(bullets: 20, dragons: 10))
 
 //Difference of Volumes of Cuboids
 func findDifference(_ a:[Int], _ b:[Int]) -> Int {
-    var aresult = a[0] * a[1] * a[2]
-    var bresult = b[0] * b[1] * b[2]
+    let aresult = a[0] * a[1] * a[2]
+    let bresult = b[0] * b[1] * b[2]
     
     if aresult > bresult {
         return aresult - bresult
@@ -322,28 +322,49 @@ func otherAngle(a: Int, b: Int) -> Int {
  return 180 - (a + b)
 }
 
-func strongNumber(_ number: Int) -> Int {
-    var digitArray: [Int] = String(number).compactMap { $0.wholeNumberValue}
-    var result = 1
-    var factorial = digitArray.reduce(1){$0 * $1}
-    print(digitArray)
-//    for i in 0..<digitArray.count {
-//        for n in 2...digitArray[i] {
-//            if n == 1 {
-//               result
-//            } else {
-//            result *= n
-//            }
-//        }
-//    }
-    return 0
-}
-
-print(strongNumber(123))
-
 
 func factorial(_ n: Int) -> Int {
  if n == 0 { return 1 }
- else { return n * factorial(n - 1) }
+ else { return n * factorial(n - 1)}
 }
- print(factorial(5))
+
+print(factorial(5))
+
+
+//func strongNumber(_ number: Int) -> Int {
+//    var digitArray: [Int] = String(number).compactMap { $0.wholeNumberValue}
+//    var number = 0
+//    print(number)
+//    var factorials: [Int] = []
+//    print(factorials)
+//    for i in 1..<digitArray.count {
+//        number = digitArray[i]
+//        if number == 0 {number = 0}
+//        else { number =  factorial(number - 1)}
+//        factorials.append(number)
+//    }
+//
+//    return 0
+//}
+//
+//print(strongNumber(123))
+
+//Leap Years
+func isLeapYear(_ year: Int) -> Bool {
+    if year % 4 == 0 && year % 400 == 0 {
+        return true
+    } else if year % 4 == 0 && year % 100 != 0 {
+        return true
+    } else if year % 4 == 0 && year < 400  {
+        return true
+    } else if year % 100 == 0 && year % 400 != 0{
+        return false
+    } else  {
+        return false
+    }
+}
+
+print(isLeapYear(2100))
+
+
+
