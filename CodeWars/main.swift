@@ -368,17 +368,17 @@ print(isLeapYear(2100))
 
 //Find uniqe
 func findUniq(_ arr: [Int]) -> Int {
-
     var dict: [Int: Int] = [:]
-
     for i in arr {
         dict[i,default: 0] += 1
     }
-
     print(dict)
-
     return 0
-
 }
 
 findUniq([1,1,1,8,1])
+
+var websites: [String] = Array(repeating: "codewars", count: 1000)
+
+//Transportation on vacation
+
