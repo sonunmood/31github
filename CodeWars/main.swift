@@ -381,4 +381,17 @@ findUniq([1,1,1,8,1])
 var websites: [String] = Array(repeating: "codewars", count: 1000)
 
 //Transportation on vacation
+func rentalCarCost(_ days: Int) -> Int {
+    var rent = 40
+    if days < 3 {
+        rent = 40 * days
+    } else if days < 7   {
+        rent = (days * rent) - 20
+    } else if days >= 7 {
+        rent = (days * rent) - 50
+    }
+    return rent
+}
+
+print(rentalCarCost(7))
 
