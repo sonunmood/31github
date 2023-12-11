@@ -413,3 +413,22 @@ func bmi(_ weight: Int, _ height: Double) -> String {
 }
 
 print(bmi(57, 160.0))
+
+
+//Enumerable Magic #25 - Take the First N Elements
+//func take(_ arr: [Int], _ n: Int) -> [Int] {
+//
+//}
+//
+//print(take([3,4,5,6,7], 4))
+
+
+//Get planet name
+func getPlanetName(_ id: Int) -> String {
+    switch id {
+    case 1: return "Mercuri"
+    case 2: return "Saturn"
+    case 3: return "Upiter"
+    default: return ""
+    }
+}
