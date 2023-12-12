@@ -416,11 +416,21 @@ print(bmi(57, 160.0))
 
 
 //Enumerable Magic #25 - Take the First N Elements
-//func take(_ arr: [Int], _ n: Int) -> [Int] {
-//
-//}
-//
-//print(take([3,4,5,6,7], 4))
+func take(_ arr: [Int], _ n: Int) -> [Int] {
+    var temp: [Int] = []
+       for i in arr {
+           if i != n {
+               temp.append(i)
+           } else if n == i {
+               temp.append(i)
+               break
+           }
+       }
+       return temp
+
+}
+
+print(take([3,4,5,6,7], 5))
 
 
 //Get planet name
