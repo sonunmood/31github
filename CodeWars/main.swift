@@ -417,17 +417,16 @@ print(bmi(57, 160.0))
 
 //Enumerable Magic #25 - Take the First N Elements
 func take(_ arr: [Int], _ n: Int) -> [Int] {
-    var temp: [Int] = []
-       for i in arr {
-           if i != n {
-               temp.append(i)
-           } else if n == i {
-               temp.append(i)
-               break
-           }
-       }
-       return temp
-
+    var result: [Int] = []
+    for i in arr {
+        if i != n {
+            result.append(i)
+        } else {
+            result.append(i)
+           
+        }
+    }
+    return result
 }
 
 print(take([3,4,5,6,7], 5))
@@ -442,3 +441,11 @@ func getPlanetName(_ id: Int) -> String {
     default: return ""
     }
 }
+
+//Reversed Strings
+func reverse(_ str: String) -> String {
+    var reversedString = str.reversed()
+    return String(reversedString)
+}
+
+print(reverse("Sonun"))
