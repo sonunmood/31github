@@ -444,8 +444,22 @@ func getPlanetName(_ id: Int) -> String {
 
 //Reversed Strings
 func reverse(_ str: String) -> String {
-    var reversedString = str.reversed()
+    let reversedString = str.reversed()
     return String(reversedString)
 }
 
 print(reverse("Sonun"))
+
+
+
+func sixToast(_ num: Int) -> Int {
+    var toastCount = 6
+    
+    if num > toastCount {
+        return num - toastCount
+    } else {
+        return toastCount - num
+    }
+}
+
+print(sixToast(2))
