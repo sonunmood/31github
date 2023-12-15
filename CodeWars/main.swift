@@ -463,3 +463,31 @@ func sixToast(_ num: Int) -> Int {
 }
 
 print(sixToast(2))
+
+
+//func balancedNumber(_ number: Int) -> String {
+//    let numberString = String(number)
+//    let middleNumber = numberString.index(numberString.startIndex, offsetBy: numberString.count / 2)
+//    print(middleNumber)
+//    if numberString.count % 2 == 0 {
+//        numberString.index(before: middleNumber)
+//    }
+//
+//
+//
+//    return ""
+//}
+//print(balancedNumber(12345))
+
+//Gravity Flip
+func flip(_ direction: String, _ a: [Int]) -> [Int] {
+    if direction == "R" {
+        return a.sorted { $0 < $1}
+    } else if direction == "L" {
+        return a.sorted {$0 > $1}
+    } else {
+        return []
+    }
+}
+
+print(flip("R", [3,4,5,6,8,9,1]))
