@@ -1,0 +1,24 @@
+func aproveOrNot(salary: Int, creditAmount: Int, year: Int) -> String {
+    var percentAmount = 0
+    let one = Int(0.3)
+    let two = Int(0.15)
+    let three = Int(0.1)
+    
+    if year == 1 {
+        percentAmount = (creditAmount + (creditAmount * one) / 12)
+    } else if year == 2 {
+        percentAmount = (creditAmount + (creditAmount * two) / 24)
+    } else if year == 3 {
+        percentAmount = (creditAmount + (creditAmount * three) / 36)
+    } else {
+        percentAmount = 0
+    }
+    
+    if percentAmount > (salary / 2) {
+        return "Одобрено"
+    } else {
+        return "Не одобрено"
+    }
+}
+
+print(aproveOrNot(salary: 47000, creditAmount: 100000, year: 2))
