@@ -368,15 +368,21 @@ print(isLeapYear(2100))
 
 //Find uniqe
 func findUniq(_ arr: [Int]) -> Int {
+    var uniqe = 0
     var dict: [Int: Int] = [:]
     for i in arr {
         dict[i,default: 0] += 1
     }
+    
+    
+
+    
+    
     print(dict)
     return 0
 }
-
-findUniq([1,1,1,8,1])
+print("Find uniqe")
+print(findUniq([1,1,1,8,1]))
 
 var websites: [String] = Array(repeating: "codewars", count: 1000)
 
@@ -465,19 +471,19 @@ func sixToast(_ num: Int) -> Int {
 print(sixToast(2))
 
 
-//func balancedNumber(_ number: Int) -> String {
-//    let numberString = String(number)
-//    let middleNumber = numberString.index(numberString.startIndex, offsetBy: numberString.count / 2)
-//    print(middleNumber)
-//    if numberString.count % 2 == 0 {
-//        numberString.index(before: middleNumber)
-//    }
-//
-//
-//
-//    return ""
-//}
-//print(balancedNumber(12345))
+func balancedNumber(_ number: Int) -> String {
+    let numberString = String(number)
+    let middleNumber = numberString.index(numberString.startIndex, offsetBy: numberString.count / 2)
+    print(middleNumber)
+    if numberString.count % 2 == 0 {
+        numberString.index(before: middleNumber)
+    }
+
+
+
+    return ""
+}
+print(balancedNumber(12345))
 
 //Gravity Flip
 func flip(_ direction: String, _ a: [Int]) -> [Int] {
@@ -491,3 +497,56 @@ func flip(_ direction: String, _ a: [Int]) -> [Int] {
 }
 
 print(flip("R", [3,4,5,6,8,9,1]))
+
+
+func uniqeDigits(_ arr: [Int]) -> Int {
+    var dict: [Int: Int] = [:]
+    print(dict)
+    for i in arr {
+        dict[i, default: 0] += 1
+    }
+    
+    
+    
+    return 0
+}
+
+print(uniqeDigits([1,1,1,4,5,5,7,8,8]))
+
+
+func findZodiac(day: Int, month: Int) -> String {
+    switch (day, month) {
+    case (23...31,3), (23...23, 4):
+        return "рыбы"
+    default: return ""
+    }
+}
+
+print(findZodiac(day: 23, month: 1))
+
+//Составить программу одобрения выдачи кредита. Пользователь должен вводить свою зарплату, cумму кредита, кол-во лет от 1 до 3. За 1 год начисляется 30% к сумме кредита, 2 - 15%, 3 - 10%. Распределить фиксированную ежемесячную оплату и проверить является ли ежемесячная оплата больше 50% зарплаты. Если больше, одобряется кредит, если нет, то отклоняется. Использовать в задаче оба условных
+
+func aproveOrNot(salary: Int, creditAmount: Int, year: Int) -> String {
+    var percentAmount = 0
+    let one = Int(0.3)
+    let two = Int(0.15)
+    let three = Int(0.1)
+    
+    if year == 1 {
+        percentAmount = (creditAmount + (creditAmount * one) / 12)
+    } else if year == 2 {
+        percentAmount = (creditAmount + (creditAmount * two) / 24)
+    } else if year == 3 {
+        percentAmount = (creditAmount + (creditAmount * three) / 36)
+    } else {
+        percentAmount = 0
+    }
+    
+    if percentAmount > (salary / 2) {
+        return "Одобрено"
+    } else {
+        return "Не одобрено"
+    }
+}
+
+print(aproveOrNot(salary: 47000, creditAmount: 100000, year: 2))
