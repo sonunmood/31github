@@ -516,13 +516,31 @@ print(uniqeDigits([1,1,1,4,5,5,7,8,8]))
 
 func findZodiac(day: Int, month: Int) -> String {
     switch (day, month) {
-    case (23...31,3), (23...23, 4):
-        return "рыбы"
+    case (21...31,3), (1...29, 4):
+        return "Овен"
+    case (20...31,4), (1...20, 5):
+        return "Телец"
+    case (21...31,5), (1...20, 6):
+        return "Близнецы"
+    case (21...31,6), (1...22, 7):
+        return "Рак"
+    case (23...31,7), (1...22, 8):
+        return "Лев"
+    case (22...31,8), (1...22, 9):
+        return "Дева"
+    case (23...31,9), (1...22, 10):
+        return "Стрелец"
+    case (23...31,10), (1...23, 11):
+        return "Скорпион"
+    case (23...31,10), (1...23, 11):
+        return "Козерог"
+    case (22...31,11), (1...23, 12):
+        return "Водолей"
     default: return ""
     }
 }
 
-print(findZodiac(day: 23, month: 1))
+print(findZodiac(day: 16, month: 9))
 
 //Составить программу одобрения выдачи кредита. Пользователь должен вводить свою зарплату, cумму кредита, кол-во лет от 1 до 3. За 1 год начисляется 30% к сумме кредита, 2 - 15%, 3 - 10%. Распределить фиксированную ежемесячную оплату и проверить является ли ежемесячная оплата больше 50% зарплаты. Если больше, одобряется кредит, если нет, то отклоняется. Использовать в задаче оба условных
 
@@ -550,3 +568,14 @@ func aproveOrNot(salary: Int, creditAmount: Int, year: Int) -> String {
 }
 
 print(aproveOrNot(salary: 47000, creditAmount: 100000, year: 2))
+
+
+func isDivisible(_ n: Int, _ x: Int, _ y: Int) -> Bool {
+    if n % x == 0 && n % y == 0 {
+        return true
+    } else {
+        return false
+    }
+}
+
+print(isDivisible(45, 5, 4))
