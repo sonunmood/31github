@@ -1,0 +1,51 @@
+func aproveOrNot(salary: Int, creditAmount: Int, year: Int) -> String {
+    var percentAmount = 0
+    let one = Int(0.3)
+    let two = Int(0.15)
+    let three = Int(0.1)
+    
+    if year == 1 {
+        percentAmount = (creditAmount + (creditAmount * one) / 12)
+    } else if year == 2 {
+        percentAmount = (creditAmount + (creditAmount * two) / 24)
+    } else if year == 3 {
+        percentAmount = (creditAmount + (creditAmount * three) / 36)
+    } else {
+        percentAmount = 0
+    }
+    
+    if percentAmount > (salary / 2) {
+        return "Одобрено"
+    } else {
+        return "Не одобрено"
+    }
+}
+
+print(aproveOrNot(salary: 47000, creditAmount: 100000, year: 2))
+
+
+func findZodiac(day: Int, month: Int) -> String {
+    switch (day, month) {
+    case (21...31,3), (1...29, 4):
+        return "Овен"
+    case (20...31,4), (1...20, 5):
+        return "Телец"
+    case (21...31,5), (1...20, 6):
+        return "Близнецы"
+    case (21...31,6), (1...22, 7):
+        return "Рак"
+    case (23...31,7), (1...22, 8):
+        return "Лев"
+    case (22...31,8), (1...22, 9):
+        return "Дева"
+    case (23...31,9), (1...22, 10):
+        return "Стрелец"
+    case (23...31,10), (1...23, 11):
+        return "Скорпион"
+    case (23...31,10), (1...23, 11):
+        return "Козерог"
+    case (22...31,11), (1...23, 12):
+        return "Водолей"
+    default: return ""
+    }
+}
