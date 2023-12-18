@@ -583,3 +583,14 @@ print(isDivisible(45, 5, 4))
 func isDivisible2(_ n: Int, _ x: Int, _ y: Int) -> Bool {
     return n % x == 0 && n % y == 0
 }
+
+func getReversedString(_ str: String) -> String {
+    let word = str.components(separatedBy: " ")
+    print (word)
+    let reversedWord = word.map {String($0.reversed())}
+    let result = reversedWord.joined(separator: " ")
+    return result
+}
+
+
+print(getReversedString("Hello world"))
