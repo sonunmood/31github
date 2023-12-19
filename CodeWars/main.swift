@@ -594,3 +594,17 @@ func getReversedString(_ str: String) -> String {
 
 
 print(getReversedString("Hello world"))
+
+//Grasshopper - Summation
+func summation(_ n: Int) -> Int {
+    var result = 0
+    var array: [Int] = []
+    for i in 1...n {
+        array.append(i)
+        result = array.reduce(0) {$0 + $1}
+    }
+    
+    return result
+}
+
+print(summation(5))
