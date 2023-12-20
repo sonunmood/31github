@@ -608,3 +608,10 @@ func summation(_ n: Int) -> Int {
 }
 
 print(summation(5))
+
+
+func check<T: Equatable>(_ a: [T], _ x: T) -> Bool {
+    a.contains(x) ? true : false
+}
+
+print(check([8,9,5,3,2,0], 8))
