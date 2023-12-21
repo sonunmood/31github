@@ -615,3 +615,9 @@ func check<T: Equatable>(_ a: [T], _ x: T) -> Bool {
 }
 
 print(check([8,9,5,3,2,0], 8))
+
+func descendingOrder(of number: Int) -> Int {
+    return Int(String(String(number).sorted(by: >))) ?? 0
+}
+print(descendingOrder(of: 76542076))
+
