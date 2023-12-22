@@ -621,3 +621,24 @@ func descendingOrder(of number: Int) -> Int {
 }
 print(descendingOrder(of: 76542076))
 
+
+//Special Number (Special Numbers Series #5)
+func specialNumber(_ number: Int) -> String {
+    let strNum = String(number)
+    let set: Set<Character> = ["0","1","2","3","4","5"]
+    var result = ""
+    
+    for i in strNum {
+        
+        if  set.contains(i) {
+            result =  "Special"
+        } else {
+            result = "Not Srecial"
+            break
+        }
+    }
+    
+    return result
+}
+
+print(specialNumber(260))
