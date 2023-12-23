@@ -1,0 +1,10 @@
+//Shortest Word
+func find_short(_ str: String) -> Int {
+    
+    let words = str.components(separatedBy: " ")
+    let shortestWord = words.min(by: {$0.count < $1.count})
+    let count = shortestWord?.count ?? 0
+    return count
+}
+
+print(find_short("Success is stumbling from failure to failure with no loss of enthusiasm."))
