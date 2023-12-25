@@ -21,3 +21,14 @@ func factorial2(_ n: Int) -> UInt64 {
 }
 
 print(factorial2(8))
+
+//Functional Addition
+func add(_ n: Int) -> ((Int) -> Int) {
+    return { x in
+        return n + x
+    }
+}
+
+let addFive = add(5)
+let total = addFive(80)
+print(total)
