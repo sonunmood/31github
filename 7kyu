@@ -32,3 +32,12 @@ func add(_ n: Int) -> ((Int) -> Int) {
 let addFive = add(5)
 let total = addFive(80)
 print(total)
+
+//Extra Perfect Numbers (Special Numbers Series #7)
+func extraPerfect(_ n: Int) -> [Int] {
+    
+    return Array(1...n).filter { $0 % 2 != 0}
+}
+
+print(extraPerfect(7))
+
