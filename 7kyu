@@ -41,3 +41,19 @@ func extraPerfect(_ n: Int) -> [Int] {
 
 print(extraPerfect(7))
 
+//Count the divisors of a number 5/31
+func divisors(_ n: UInt32) -> UInt32 {
+    
+    var result: [UInt32] = []
+    
+    for i in 1...n {
+        if n % i == 0 {
+            result.append(i)
+        }
+    }
+
+    return UInt32(result.count)
+}
+
+print(divisors(21))
+
