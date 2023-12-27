@@ -57,3 +57,9 @@ func divisors(_ n: UInt32) -> UInt32 {
 
 print(divisors(21))
 
+func divisors2(_ n: Int) -> Int {
+    return Array(1...n).filter{n % $0 == 0}.count
+}
+
+print(divisors2(21))
+
