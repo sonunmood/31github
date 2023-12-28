@@ -63,3 +63,9 @@ func divisors2(_ n: Int) -> Int {
 
 print(divisors2(21))
 
+//Replace all items
+func replaceAll<T: Equatable>(_ array: [T], old: T, new: T) -> [T] {
+    return array.map{ $0 == old ? new : $0 }
+}
+
+print(replaceAll([1,4,5,6,7,4,4,4,4], old: 4, new: 9))
