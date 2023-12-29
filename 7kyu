@@ -69,3 +69,9 @@ func replaceAll<T: Equatable>(_ array: [T], old: T, new: T) -> [T] {
 }
 
 print(replaceAll([1,4,5,6,7,4,4,4,4], old: 4, new: 9))
+
+//Heron's formula
+func heron(_ a: Double, _ b: Double, _ c: Double) -> Double {
+  let s = (a + b + c) / 2
+  return  sqrt(s * (s - a) * (s - b) * (s - c))
+}
