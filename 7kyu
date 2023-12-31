@@ -75,3 +75,12 @@ func heron(_ a: Double, _ b: Double, _ c: Double) -> Double {
   let s = (a + b + c) / 2
   return  sqrt(s * (s - a) * (s - b) * (s - c))
 }
+
+
+
+//Flatten and sort an array
+func flattenAndSort<T: Comparable>(_ arr: [[T]]) -> [T] {
+let result = arr.flatMap{$0}
+    let sorted = result.sorted()
+    return sorted
+}
