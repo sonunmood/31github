@@ -10,3 +10,16 @@ func flip(_ direction: String, _ a: [Int]) -> [Int] {
 
 print(flip("R", [3,4,5,6,8,9,1]))
 
+
+//Thinkful - Logic Drills: Traffic light
+func update_light(_ current: String) -> String {
+    
+    switch current {
+    case "green":  return "yellow"
+    case "yellow": return "red"
+    case "red":    return "green"
+    default:       return "error"
+    }
+}
+ 
+print(update_light("yellow"))
