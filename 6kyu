@@ -1,0 +1,21 @@
+//Dictionary Merge
+func merge<Key, Value>(_ dicts: [[Key: Value]]) -> [Key: [Value]] {
+  
+    var result = [Key: [Value]]()
+    
+    for dict in dicts {
+        for (key, value) in dict {
+            if var values = result[key] {
+                print (result[key])
+                values.append(value)
+                result[key] = values
+            } else {
+                result[key] = [value]
+            }
+        }
+    }
+    
+  return result
+}
+
+print(merge([["A": 3], ["B": 1], ["A": 3], ["A": 2], ["C": 3]]))
