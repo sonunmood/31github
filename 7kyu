@@ -84,3 +84,26 @@ let result = arr.flatMap{$0}
     let sorted = result.sorted()
     return sorted
 }
+
+//Partial Word Searching
+func wordSearch(_ str:String, _ arr:[String]) -> [String] {
+    
+    var searchedStrings: [String] = []
+    
+    for i in arr {
+        if i.lowercased().contains(str.lowercased()) {
+            searchedStrings.append(i)
+        }
+    }
+    
+    if searchedStrings.isEmpty {
+        searchedStrings.append("Empty")
+    } else {
+        return searchedStrings
+    }
+    
+    return searchedStrings
+}
+
+print(wordSearch("Lo", ["koko", "kiki", "lolo" ]))
+
