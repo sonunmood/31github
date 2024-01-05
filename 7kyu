@@ -107,3 +107,12 @@ func wordSearch(_ str:String, _ arr:[String]) -> [String] {
 
 print(wordSearch("Lo", ["koko", "kiki", "lolo" ]))
 
+
+//Spacify
+func spacify(_ str: String) -> String {
+
+    return str.map{String($0)}.joined(separator: " " )
+
+}
+
+print(spacify("I love you"))
