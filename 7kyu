@@ -116,3 +116,18 @@ func spacify(_ str: String) -> String {
 }
 
 print(spacify("I love you"))
+
+//Sum of Minimums!
+func sumOfMinimums(_ numbers: [[Int]]) -> Int {
+  
+    var minimums: [Int] = []
+  
+    for i in numbers {
+        guard let minNumber = i.min() else {return 0}
+        minimums.append(minNumber)
+    }
+
+    return minimums.reduce(0, +)
+}
+
+print(sumOfMinimums([[5,7,9,2,3,5], [7,5,3,4,0], [4,6,4,3,2,1], [4567,8888,444,22]]))
