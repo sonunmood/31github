@@ -23,3 +23,21 @@ func update_light(_ current: String) -> String {
 }
  
 print(update_light("yellow"))
+
+//Expressions Matter
+func expressionMatter(_ a: Int, _ b: Int, _ c: Int) -> Int {
+    
+    guard a >= 1 && a <= 10 && b >= 1 && b <= 10 && c >= 1  && c <= 10 else { return 0 }
+   
+    let result1: Int = a + b + c
+    let result2: Int = a * b + c
+    let result3: Int = a + b * c
+    let result4: Int = (a + b) * c
+    let result5: Int = a * b * c
+    let result6: Int = a * (b + c)
+
+    return [result1, result2, result3, result4, result5, result6].max()!
+}
+
+print(expressionMatter(98, 4, 4))
+
