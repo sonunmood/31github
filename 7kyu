@@ -131,3 +131,16 @@ func sumOfMinimums(_ numbers: [[Int]]) -> Int {
 }
 
 print(sumOfMinimums([[5,7,9,2,3,5], [7,5,3,4,0], [4,6,4,3,2,1], [4567,8888,444,22]]))
+
+//Square Every Digit
+func squareDigits(_ num: Int) -> Int {
+    let digits =  String(num).compactMap{$0.wholeNumberValue}.map{$0 * $0}
+    var number = ""
+    
+    for i in digits {
+        number += String(i)
+    }
+  return Int(number)!
+}
+
+print(squareDigits(4567890))
