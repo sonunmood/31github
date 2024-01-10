@@ -19,3 +19,20 @@ func merge<Key, Value>(_ dicts: [[Key: Value]]) -> [Key: [Value]] {
 }
 
 print(merge([["A": 3], ["B": 1], ["A": 3], ["A": 2], ["C": 3]]))
+
+//Duplicate Encoder
+func duplicateEncode(_ word: String) -> String {
+
+    let lowercasedWord = word.lowercased()
+    var dict: [Character: Int] = [:]
+    
+    for char in lowercasedWord {
+        dict[char, default: 0] += 1
+        print(dict)
+    }
+   
+    return lowercasedWord.map{dict[$0]! > 1 ? ")" : "("}.joined()
+    
+}
+
+print(duplicateEncode("ghjkjhg"))
