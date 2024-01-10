@@ -145,4 +145,17 @@ func squareDigits(_ num: Int) -> Int {
 
 print(squareDigits(4567890))
 
-// Commit
+//Jumping Number (Special Numbers Series #4)
+func jumpingNumber(_ number: Int) -> String {
+  let numberStr = String(number)
+    let digits = numberStr.map { Int(String($0))! }
+    
+    for i in 0..<digits.count - 1 {
+        let diff = abs(digits[i] - digits[i + 1])
+        if diff != 1 {
+            return "Not!!"
+        }
+    }
+    return "Jumping!!"
+}
+
