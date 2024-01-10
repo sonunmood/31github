@@ -41,3 +41,9 @@ func expressionMatter(_ a: Int, _ b: Int, _ c: Int) -> Int {
 
 print(expressionMatter(98, 4, 4))
 
+
+//Convert number to reversed array of digits
+func digitize(_ num:Int) -> [Int] {
+  return String(num).compactMap{$0.wholeNumberValue}.reversed()
+}
+
