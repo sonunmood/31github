@@ -159,3 +159,27 @@ func jumpingNumber(_ number: Int) -> String {
     return "Jumping!!"
 }
 
+
+//Find the nth Digit of a Number
+func findDigit(_ num:Int, _ nth: Int) -> Int {
+    if nth <= 0 {
+        return -1
+    }
+    
+    let positive = abs(num)
+    
+    let numString = String(num)
+    
+    if nth > numString.count {
+        return 0
+    }
+    
+    let index = numString.index(numString.endIndex, offsetBy: -nth)
+        if let digit = numString[index].wholeNumberValue {
+            return digit
+        } else {
+            return -1
+    }
+}
+
+
