@@ -183,3 +183,19 @@ func findDigit(_ num:Int, _ nth: Int) -> Int {
 }
 
 
+//Lost number in number sequence
+func findDeletedNumber(_ array: [Int], _ mixArray: [Int]) -> Int {
+    
+    let mixArray = Set(mixArray)
+    
+    for number in array {
+        if !mixArray.contains(number) {
+            return number
+        }
+    }
+    
+    return 0
+}
+
+print(findDeletedNumber([1,2,3,4,5,6,7,8,9,10], [1,2,3,5,6,7,8,9,10]))
+
