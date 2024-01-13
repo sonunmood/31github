@@ -47,3 +47,7 @@ func digitize(_ num:Int) -> [Int] {
   return String(num).compactMap{$0.wholeNumberValue}.reversed()
 }
 
+//Volume of a Cuboid
+func getVolumeOfCuboid(length: Int, width: Int, height: Int) -> Int {
+  length * width * height
+}
