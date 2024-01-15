@@ -207,3 +207,13 @@ func accum(_ s: String) -> String {
     }.joined(separator: "-")
 }
 
+//Beginner - Lost Without a Map
+func maps(a : Array<Int>) -> Array<Int> {
+  var newArray: [Int] = []
+    for  i in a {
+        newArray.append(i * 2)
+    }
+    return newArray
+
+}
+
