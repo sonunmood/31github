@@ -51,3 +51,8 @@ func digitize(_ num:Int) -> [Int] {
 func getVolumeOfCuboid(length: Int, width: Int, height: Int) -> Int {
   length * width * height
 }
+
+//Dollars and Cents
+func formatMoney(_ val:Double) -> String {
+  return String(format: "$%.2f", val)
+}
