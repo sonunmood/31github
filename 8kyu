@@ -56,3 +56,14 @@ func getVolumeOfCuboid(length: Int, width: Int, height: Int) -> Int {
 func formatMoney(_ val:Double) -> String {
   return String(format: "$%.2f", val)
 }
+
+
+//Remove First and Last Character
+func removeFirstAndLast(_ str: String) -> String {
+    
+    let firstIndex = str.index(after: str.startIndex)
+    let lastIndex = str.index(before: str.endIndex)
+    return String(str[firstIndex..<lastIndex])
+}
+
+print(removeFirstAndLast("Hello"))
