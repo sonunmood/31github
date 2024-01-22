@@ -67,3 +67,11 @@ func removeFirstAndLast(_ str: String) -> String {
 }
 
 print(removeFirstAndLast("Hello"))
+
+func getAverage(_ marks: [Int]) -> Int {
+    var result = Double(marks.reduce(0, +)/marks.count)
+    
+    return Int(floor(result))
+}
+
+print(getAverage([4,6,7,10]))
