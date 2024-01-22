@@ -68,6 +68,8 @@ func removeFirstAndLast(_ str: String) -> String {
 
 print(removeFirstAndLast("Hello"))
 
+
+//Get the mean of an array
 func getAverage(_ marks: [Int]) -> Int {
     var result = Double(marks.reduce(0, +)/marks.count)
     
