@@ -77,3 +77,8 @@ func getAverage(_ marks: [Int]) -> Int {
 }
 
 print(getAverage([4,6,7,10]))
+
+//Grasshopper - Messi goals function
+func goals(laLigaGoals: Int, copaDelReyGoals: Int, championsLeagueGoals: Int) -> Int {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
